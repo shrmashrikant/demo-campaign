@@ -32,21 +32,23 @@ public class CampaignServiceImpl implements CampaignService {
 
     @Override
     public String addAll(Items items) {
-       /* for (CampaignRequest campaignRequest : items.getItems()) {
+        for (CampaignRequest campaignRequest : items.getItems()) {
             Campaign campaign = new Campaign();
             Campaign campaigndb = campaignRepository.findByTitleContains(campaignRequest.getTitle());
             if (Objects.nonNull(campaigndb)) {
-                campaign.setId(campaigndb.getId());
+                campaign.setCampaign_id(campaigndb.getCampaign_id());
             }
+            campaign.setCreatedAt(LocalDate.from(LocalDateTime.parse((campaignRequest.getCreated_at().replace("Z", "")))));
+            campaign.setUpdatedAt(LocalDate.from(LocalDateTime.parse(campaignRequest.getUpdated_at().replace("Z", ""))));
             campaign.setSerial_number(campaignRequest.getSerial_number());
             campaign.setId(campaignRequest.getId());
             campaign.setTitle(campaignRequest.getTitle());
             campaign.setSource_title(campaignRequest.getSource_title());
-            campaign.setStats(statRepository.save(ampaignRequest.getStat(), campaigndb == null ? null : campaigndb.getStats().getId()));
-            campaign.setPublisherDetails(publisherDetailsRepositry.save(PublisherDetails.builder().domain(campaignRequest.getPublisher_details().getDomain()).build()));
+            campaign.setStats(prepareStat(campaignRequest.getStat(), campaigndb == null ? null : campaigndb.getStats().getId()));
+            campaign.setPublisherDetails(preparePublisherDetails(campaignRequest.getPublisher_details(), campaigndb == null ? null : campaigndb.getPublisherDetails().getId()));
             campaignRepository.save(campaign);
 
-        }*/
+        }
         return "Campaign  Data process Successfully";
     }
 
@@ -68,6 +70,14 @@ public class CampaignServiceImpl implements CampaignService {
             campaign.setSource_title(campaignRequest.getSource_title());
             campaign.setStats(prepareStat(campaignRequest.getStat(), campaigndb == null ? null : campaigndb.getStats().getId()));
             campaign.setPublisherDetails(preparePublisherDetails(campaignRequest.getPublisher_details(), campaigndb == null ? null : campaigndb.getPublisherDetails().getId()));
+            campaign.setUserId(campaignRequest.getUserId());
+            campaign.setSourceId(campaignRequest.getSourceId());
+            campaign.setSourceCampaignId(campaignRequest.getSourceCampaignId());
+            campaign.setDomainId(campaignRequest.getDomainId());
+            campaign.setTrackbackUrl(campaignRequest.getTrackbackUrl());
+            campaign.setImpressionUrl(campaignRequest.getImpressionUrl());
+            campaign.setCpc(campaignRequest.getCpc());
+            campaign.setCoupon(campaignRequest.getCoupon());
             campaignRepository.save(campaign);
 
         }

@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.report.demo.response.Items;
 import com.report.demo.service.CampaignService;
+import com.report.demo.utils.ApiBasicConfig;
 import lombok.RequiredArgsConstructor;
 import okhttp3.*;
 import org.springframework.http.HttpStatus;
@@ -16,7 +17,7 @@ import java.io.IOException;
 import java.time.LocalDate;
 
 @RestController
-@RequestMapping("/campaign")
+@RequestMapping(value = ApiBasicConfig.CAMPAIGN)
 @RequiredArgsConstructor
 public class CampaignController {
     private final CampaignService campaignService;
