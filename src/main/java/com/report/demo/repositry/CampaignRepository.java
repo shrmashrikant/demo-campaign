@@ -13,4 +13,5 @@ public interface CampaignRepository extends JpaRepository<Campaign, Long> {
     Campaign findByTitleContains(String title);
 
     Campaign findByTitleContainsAndUpdatedAt(String title, LocalDate localDate);
+    Campaign findByIdAndUpdatedAt(String id, LocalDate localDate);
 }

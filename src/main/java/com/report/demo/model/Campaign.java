@@ -51,7 +51,7 @@ public class Campaign extends BaseEntity {
     @JoinColumn(name = "stats_id", referencedColumnName = "stats_id")
     private Stat stats;
 
-    @OneToOne(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE})
+    @OneToOne(fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
     @JoinColumn(name = "publisher_details_id", referencedColumnName = "publisher_details_id")
     private PublisherDetails publisherDetails;
 

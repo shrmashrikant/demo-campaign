@@ -59,7 +59,8 @@ public class CampaignServiceImpl implements CampaignService {
     public String saveAggregatedByDay(Items items) {
         for (CampaignRequest campaignRequest : items.getItems()) {
             Long campaign_id = null;
-            Campaign campaigndb = campaignRepository.findByTitleContainsAndUpdatedAt(campaignRequest.getTitle(), LocalDate.now());
+            //Campaign campaigndb = campaignRepository.findByTitleContainsAndUpdatedAt(campaignRequest.getTitle(), LocalDate.now());
+            Campaign campaigndb = campaignRepository.findByIdAndUpdatedAt(campaignRequest.getTitle(), LocalDate.now());
             if (Objects.nonNull(campaigndb)) {
                 campaign_id = campaigndb.getCampaign_id();
             }
@@ -74,11 +75,11 @@ public class CampaignServiceImpl implements CampaignService {
 
     private Stat prepareStat(StatsRequest request, Long statsId) {
         Long id = null;
-        Stat statDb = statsId == null ? null : statRepository.findById(statsId).get();
+        Stat statDb = statsId == null ? null : statRepository.findById(statsId).orElse(null);
         if (statDb != null && statDb.getId() != null) {
             id = statDb.getId();
         }
-        return statRepository.save(statMapper.statResponseToEntity(request, id));
+        return statMapper.statResponseToEntity(request, id);
     }
 
     private PublisherDetails preparePublisherDetails(PublisherDetailRequest request, Long publisherId) {
@@ -87,6 +88,6 @@ public class CampaignServiceImpl implements CampaignService {
         if (dbPublisherDetails != null && dbPublisherDetails.getId() != null) {
             pubId = dbPublisherDetails.getId();
         }
-        return publisherDetailsRepositry.save(publisherDetailsMapper.responseToEntity(request, pubId));
+        return publisherDetailsMapper.responseToEntity(request, pubId);
     }
 }
