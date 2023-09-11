@@ -67,14 +67,14 @@ public class Campaign extends BaseEntity {
     @NotBlank(message = "created_at")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    @JsonProperty("createdAt")
+    @JsonProperty("created_at")
     private LocalDate createdAt;
 
     @Column(name = "updated_at")
     @NotBlank(message = "updated_at")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    @JsonProperty("updatedAt")
+    @JsonProperty("updated_at")
     private LocalDate updatedAt;
 
     @JsonIgnoreProperties("user_id")
