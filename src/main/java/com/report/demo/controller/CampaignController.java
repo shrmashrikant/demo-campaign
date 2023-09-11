@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
+import java.time.LocalDate;
 
 @RestController
 @RequestMapping(value = ApiBasicConfig.CAMPAIGN)
@@ -25,7 +26,7 @@ public class CampaignController {
     @GetMapping("/get")
     public ResponseEntity<String> campaignsModels() throws IOException {
         Gson gson = new Gson();
-        JsonObject entity = gson.fromJson(okHttpsApiService.getCampaignData(ApiBasicConfig.CAMPAIGN_API_DATA_BY_FILTER).string(), JsonObject.class);
+        JsonObject entity = gson.fromJson(okHttpsApiService.getCampaignData(String.format(ApiBasicConfig.CAMPAIGN_API_DATA_BY_FILTER, LocalDate.now(),LocalDate.now())).string(), JsonObject.class);
         return new ResponseEntity<>(campaignService.saveAggregatedByDay(gson.fromJson(entity, Items.class)), HttpStatus.OK);
     }
 }

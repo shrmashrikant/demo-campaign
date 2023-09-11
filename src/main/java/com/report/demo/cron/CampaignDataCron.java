@@ -14,6 +14,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
+import java.time.LocalDate;
 
 @ConditionalOnProperty(value = {"app.scheduling.global.enable", "app.scheduling.campaignData.enable"}, havingValue = "true")
 @Slf4j
@@ -35,7 +36,7 @@ public class CampaignDataCron {
 
     private void signalDataModels() throws IOException {
         Gson gson = new Gson();
-        JsonObject entity = gson.fromJson(okHttpsApiService.getCampaignData(ApiBasicConfig.CAMPAIGN_API_DATA_BY_FILTER).string(), JsonObject.class);
+        JsonObject entity = gson.fromJson(okHttpsApiService.getCampaignData(String.format(ApiBasicConfig.CAMPAIGN_API_DATA_BY_FILTER, LocalDate.now(),LocalDate.now())).string(), JsonObject.class);
         campaignService.saveAggregatedByDay(gson.fromJson(entity, Items.class));
 
     }

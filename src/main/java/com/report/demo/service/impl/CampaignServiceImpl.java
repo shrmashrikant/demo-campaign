@@ -60,7 +60,7 @@ public class CampaignServiceImpl implements CampaignService {
         for (CampaignRequest campaignRequest : items.getItems()) {
             Long campaign_id = null;
             //Campaign campaigndb = campaignRepository.findByTitleContainsAndUpdatedAt(campaignRequest.getTitle(), LocalDate.now());
-            Campaign campaigndb = campaignRepository.findByIdAndUpdatedAt(campaignRequest.getTitle(), LocalDate.now());
+            Campaign campaigndb = campaignRepository.findByIdAndUpdatedAt(campaignRequest.getId(), LocalDate.now());
             if (Objects.nonNull(campaigndb)) {
                 campaign_id = campaigndb.getCampaign_id();
             }
