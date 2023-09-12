@@ -5,8 +5,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
-import com.report.demo.response.PublisherDetailRequest;
-import com.report.demo.response.StatsRequest;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,7 +13,6 @@ import lombok.experimental.SuperBuilder;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 @Entity(name = "campaign")
 @Data
@@ -53,7 +50,7 @@ public class Campaign extends BaseEntity {
 
     @OneToOne(fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
     @JoinColumn(name = "publisher_details_id", referencedColumnName = "publisher_details_id")
-    private PublisherDetails publisherDetails;
+    private PublisherDetails publisher_details;
 
     @Column(name = "add_to_cart")
     @NotBlank(message = "add to cart")

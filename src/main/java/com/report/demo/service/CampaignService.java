@@ -1,13 +1,18 @@
 package com.report.demo.service;
 
-import com.google.gson.JsonObject;
-import com.report.demo.response.CampaignRequest;
-import com.report.demo.response.Items;
+import com.report.demo.request.Items;
+import com.report.demo.response.CampaignCsvResponse;
 
-import java.util.List;
+import java.io.IOException;
+import java.time.LocalDate;
+import java.util.Map;
 
 public interface CampaignService {
     String addAll(Items items);
     String saveAggregatedByDay(Items items);
+    String saveDataByDateRenge(Items items);
+
+    CampaignCsvResponse downloadCsv(LocalDate fromDate,LocalDate toDate);
+    Map<String,Object> exportToExcelCampaignData(String fromDate,String toDate) throws IOException;
 
 }

@@ -1,7 +1,7 @@
 package com.report.demo.mapper;
 
 import com.report.demo.model.Campaign;
-import com.report.demo.response.CampaignRequest;
+import com.report.demo.request.CampaignRequest;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Named;
@@ -22,5 +22,7 @@ public interface CampaignMapper {
     default LocalDate StringToLocalDate(String dateTime) {
         return LocalDate.from(LocalDateTime.parse((dateTime.replace("Z", ""))));
     }
+
+
 
 }

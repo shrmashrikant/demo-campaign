@@ -2,7 +2,7 @@ package com.report.demo.cron;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
-import com.report.demo.response.Items;
+import com.report.demo.request.Items;
 import com.report.demo.service.CampaignService;
 import com.report.demo.service.OkHttpsApiService;
 import com.report.demo.utils.ApiBasicConfig;
@@ -30,11 +30,11 @@ public class CampaignDataCron {
         log.info("cron job for evey 30 mints per day");
         String timeZone = "America/Edmonton";
         log.info("Processing campaignData  by date and campaign title data!!");
-        signalDataModels();
+        campaignDataModels();
         log.info("Successfully processed campaign data!!");
     }
 
-    private void signalDataModels() throws IOException {
+    private void campaignDataModels() throws IOException {
         Gson gson = new Gson();
         JsonObject entity = gson.fromJson(okHttpsApiService.getCampaignData(String.format(ApiBasicConfig.CAMPAIGN_API_DATA_BY_FILTER, LocalDate.now(),LocalDate.now())).string(), JsonObject.class);
         campaignService.saveAggregatedByDay(gson.fromJson(entity, Items.class));

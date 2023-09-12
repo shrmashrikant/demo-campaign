@@ -1,7 +1,7 @@
 package com.report.demo.mapper;
 
 import com.report.demo.model.PublisherDetails;
-import com.report.demo.response.PublisherDetailRequest;
+import com.report.demo.request.PublisherDetailRequest;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.NullValuePropertyMappingStrategy;

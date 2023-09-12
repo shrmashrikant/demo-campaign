@@ -1,4 +1,4 @@
-package com.report.demo.response;
+package com.report.demo.request;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;

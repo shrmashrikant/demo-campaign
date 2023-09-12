@@ -30,7 +30,7 @@ public class PublisherDetails {
     private String preview;
 
     @JsonIgnoreProperties(value = "preview_url")
-    private String previewUrl;
+    private String preview_url;
 
     @JsonIgnoreProperties(value = "advertiser")
     private String advertiser;
@@ -42,20 +42,20 @@ public class PublisherDetails {
     private String coupon;
 
     @JsonIgnoreProperties(value = "hide_payout_details")
-    private boolean hidePayoutDetails;
+    private boolean hide_payout_details;
 
     @JsonIgnoreProperties(value = "campaign_type")
-    private String campaignType;
+    private String campaign_type;
 
     @JsonIgnoreProperties(value = "hide_deeplinks")
-    private boolean hideDeeplinks;
+    private boolean hide_deeplinks;
 
     @JsonIgnoreProperties(value = "hide_direct_tracking_urls")
-    private boolean hideDirectTrackingUrls;
+    private boolean hide_direct_tracking_urls;
 
     @JsonIgnoreProperties(value = "hide_redirect_tracking_url")
-    private boolean hideRedirectTrackingUrl;
+    private boolean hide_redirect_tracking_url;
 
     @JsonIgnoreProperties(value = "hide_redirect_impression_url")
-    private boolean hideRedirectImpressionUrl;
+    private boolean hide_redirect_impression_url;
 }

@@ -1,4 +1,4 @@
-package com.report.demo.response;
+package com.report.demo.request;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
@@ -19,25 +19,25 @@ public class StatsRequest {
     private int approved;
 
     @JsonIgnoreProperties(value = "approved_cr")
-    private int approvedCr;
+    private int approved_cr;
 
     @JsonIgnoreProperties(value = "attribution")
     private int attribution;
 
     @JsonIgnoreProperties(value = "attribution_rate")
-    private int attributionRate;
+    private int attribution_rate;
 
     @JsonIgnoreProperties(value = "baddevice")
     private int baddevice;
 
     @JsonIgnoreProperties(value = "baddevice_rate")
-    private int baddeviceRate;
+    private int baddevice_rate;
 
     @JsonIgnoreProperties(value = "blacklist")
     private int blacklist;
 
     @JsonIgnoreProperties(value = "blacklist_rate")
-    private int blacklistRate;
+    private int blacklist_rate;
 
     @JsonIgnoreProperties(value = "clicks")
     private int clicks;
@@ -48,8 +48,6 @@ public class StatsRequest {
     @JsonIgnoreProperties(value = "convtype1")
     private int convtype1;
 
-    @JsonIgnoreProperties(value = "convtype9")
-    private int convtype9;
 
     @JsonIgnoreProperties(value = "cost")
     private int cost;
@@ -73,40 +71,40 @@ public class StatsRequest {
     private int datacenter;
 
     @JsonIgnoreProperties(value = "datacenter_rate")
-    private int datacenterRate;
+    private int datacenter_rate;
 
     @JsonIgnoreProperties(value = "declined")
     private int declined;
 
     @JsonIgnoreProperties(value = "declined_cr")
-    private int declinedCr;
+    private int declined_cr;
 
     @JsonIgnoreProperties(value = "default_aov")
-    private double defaultAov;
+    private double default_aov;
 
     @JsonIgnoreProperties(value = "default_cost")
-    private int defaultCost;
+    private int default_cost;
 
     @JsonIgnoreProperties(value = "default_cpa")
-    private int defaultCpa;
+    private int default_cpa;
 
     @JsonIgnoreProperties(value = "default_cr")
-    private double defaultCr;
+    private double default_cr;
 
     @JsonIgnoreProperties(value = "default_profit")
-    private double defaultProfit;
+    private double default_profit;
 
     @JsonIgnoreProperties(value = "default_roas")
-    private int defaultRoas;
+    private int default_roas;
 
     @JsonIgnoreProperties(value = "default_roi")
-    private int defaultRoi;
+    private int default_roi;
 
     @JsonIgnoreProperties(value = "epc")
     private double epc;
 
     @JsonIgnoreProperties(value = "epc_lp")
-    private double epcLp;
+    private double epc_lp;
 
     @JsonIgnoreProperties(value = "epc_roi")
     private int epcRoi;
@@ -121,67 +119,67 @@ public class StatsRequest {
     private int impressions;
 
     @JsonIgnoreProperties(value = "impressions_visible")
-    private int impressionsVisible;
+    private int impressions_visible;
 
     @JsonIgnoreProperties(value = "lp_clicks")
-    private int lpClicks;
+    private int lp_clicks;
 
     @JsonIgnoreProperties(value = "lp_clicks_cr")
-    private double lpClicksCr;
+    private double lp_clicks_cr;
 
     @JsonIgnoreProperties(value = "lp_clicks_ctr")
-    private double lpClicksCtr;
+    private double lp_clicks_ctr;
 
     @JsonIgnoreProperties(value = "lp_ctr")
-    private double lpCtr;
+    private double lp_ctr;
 
     @JsonIgnoreProperties(value = "lp_views")
-    private int lpViews;
+    private int lp_views;
 
     @JsonIgnoreProperties(value = "lp_views_cr")
-    private double lpViewsCr;
+    private double lp_views_cr;
 
     @JsonIgnoreProperties(value = "ok")
     private int ok;
 
     @JsonIgnoreProperties(value = "ok_rate")
-    private int okRate;
+    private int ok_rate;
 
     @JsonIgnoreProperties(value = "other")
     private int other;
 
     @JsonIgnoreProperties(value = "other_cr")
-    private int otherCr;
+    private int other_cr;
 
     @JsonIgnoreProperties(value = "pending")
     private int pending;
 
     @JsonIgnoreProperties(value = "pending_cr")
-    private int pendingCr;
+    private int pending_cr;
 
     @JsonIgnoreProperties(value = "prelp_clicks")
-    private int prelpClicks;
+    private int prelp_clicks;
 
     @JsonIgnoreProperties(value = "prelp_clicks_cr")
-    private int prelpClicksCr;
+    private int prelp_clicks_cr;
 
     @JsonIgnoreProperties(value = "prelp_clicks_ctr")
-    private int prelpClicksCtr;
+    private int prelp_clicks_ctr;
 
     @JsonIgnoreProperties(value = "prelp_views")
-    private int prelpViews;
+    private int prelp_views;
 
     @JsonIgnoreProperties(value = "prelp_views_cr")
-    private int prelpViewsCr;
+    private int prelp_views_cr;
 
     @JsonIgnoreProperties(value = "profit")
     private double profit;
 
     @JsonIgnoreProperties(value = "pub_revenue")
-    private int pubRevenue;
+    private int pub_revenue;
 
     @JsonIgnoreProperties(value = "pub_revenue_legacy")
-    private int pubRevenueLegacy;
+    private int pub_revenue_legacy;
 
     @JsonIgnoreProperties(value = "revenue")
     private double revenue;
@@ -189,7 +187,62 @@ public class StatsRequest {
     @JsonIgnoreProperties(value = "revenuetype1")
     private int revenuetype1;
 
+    @JsonIgnoreProperties(value = "revenuetype10")
+    private int revenuetype10;
 
+    @JsonIgnoreProperties(value = "revenuetype11")
+    private int revenuetype11;
+
+    @JsonIgnoreProperties(value = "revenuetype12")
+    private int revenuetype12;
+
+    @JsonIgnoreProperties(value = "revenuetype13")
+    private int revenuetype13;
+
+    @JsonIgnoreProperties(value = "revenuetype14")
+    private int revenuetype14;
+
+    @JsonIgnoreProperties(value = "revenuetype15")
+    private int revenuetype15;
+
+    @JsonIgnoreProperties(value = "revenuetype16")
+    private int revenuetype16;
+
+    @JsonIgnoreProperties(value = "revenuetype17")
+    private int revenuetype17;
+
+    @JsonIgnoreProperties(value = "revenuetype18")
+    private int revenuetype18;
+
+    @JsonIgnoreProperties(value = "revenuetype19")
+    private int revenuetype19;
+
+    @JsonIgnoreProperties(value = "revenuetype2")
+    private int revenuetype2;
+
+    @JsonIgnoreProperties(value = "revenuetype20")
+    private int revenuetype20;
+
+    @JsonIgnoreProperties(value = "revenuetype3")
+    private int revenuetype3;
+
+    @JsonIgnoreProperties(value = "revenuetype4")
+    private int revenuetype4;
+
+    @JsonIgnoreProperties(value = "revenuetype5")
+    private int revenuetype5;
+
+    @JsonIgnoreProperties(value = "revenuetype6")
+    private int revenuetype6;
+
+    @JsonIgnoreProperties(value = "revenuetype7")
+    private int revenuetype7;
+
+    @JsonIgnoreProperties(value = "revenuetype8")
+    private int revenuetype8;
+
+    @JsonIgnoreProperties(value = "revenuetype9")
+    private int revenuetype9;
 
     @JsonIgnoreProperties(value = "roas")
     private int roas;
@@ -198,10 +251,10 @@ public class StatsRequest {
     private int roi;
 
     @JsonIgnoreProperties(value = "total_conversions")
-    private int totalConversions;
+    private int total_conversions;
 
     @JsonIgnoreProperties(value = "total_revenue")
-    private double totalRevenue;
+    private double total_revenue;
 
     @JsonIgnoreProperties(value = "tr")
     private int tr;
@@ -210,346 +263,346 @@ public class StatsRequest {
     private int transactions;
 
     @JsonIgnoreProperties(value = "type10_aov")
-    private int type10Aov;
+    private int type10_aov;
 
     @JsonIgnoreProperties(value = "type10_cost")
-    private int type10Cost;
+    private int type10_cost;
 
     @JsonIgnoreProperties(value = "type10_cpa")
-    private int type10Cpa;
+    private int type10_cpa;
 
     @JsonIgnoreProperties(value = "type10_cr")
-    private int type10Cr;
+    private int type10_cr;
 
     @JsonIgnoreProperties(value = "type10_profit")
-    private int type10Profit;
+    private int type10_profit;
 
     @JsonIgnoreProperties(value = "type10_roas")
-    private int type10Roas;
+    private int type10_roas;
 
     @JsonIgnoreProperties(value = "type10_roi")
-    private int type10Roi;
+    private int type10_roi;
 
     @JsonIgnoreProperties(value = "type11_aov")
-    private int type11Aov;
+    private int type11_aov;
 
     @JsonIgnoreProperties(value = "type11_cost")
-    private int type11Cost;
+    private int type11_cost;
 
     @JsonIgnoreProperties(value = "type11_cpa")
-    private int type11Cpa;
+    private int type11_cpa;
 
     @JsonIgnoreProperties(value = "type11_cr")
-    private int type11Cr;
+    private int type11_cr;
 
     @JsonIgnoreProperties(value = "type11_profit")
-    private int type11Profit;
+    private int type11_profit;
 
     @JsonIgnoreProperties(value = "type11_roas")
-    private int type11Roas;
+    private int type11_roas;
 
     @JsonIgnoreProperties(value = "type11_roi")
-    private int type11Roi;
+    private int type11_roi;
 
     @JsonIgnoreProperties(value = "type12_aov")
-    private int type12Aov;
+    private int type12_aov;
 
     @JsonIgnoreProperties(value = "type12_cost")
-    private int type12Cost;
+    private int type12_cost;
 
     @JsonIgnoreProperties(value = "type12_cpa")
-    private int type12Cpa;
+    private int type12_cpa;
 
     @JsonIgnoreProperties(value = "type12_cr")
-    private int type12Cr;
+    private int type12_cr;
 
     @JsonIgnoreProperties(value = "type12_profit")
-    private int type12Profit;
+    private int type12_profit;
 
     @JsonIgnoreProperties(value = "type12_roas")
-    private int type12Roas;
+    private int type12_roas;
 
     @JsonIgnoreProperties(value = "type12_roi")
-    private int type12Roi;
+    private int type12_roi;
 
     @JsonIgnoreProperties(value = "type13_aov")
-    private int type13Aov;
+    private int type13_aov;
 
     @JsonIgnoreProperties(value = "type13_cost")
-    private int type13Cost;
+    private int type13_cost;
 
     @JsonIgnoreProperties(value = "type13_cpa")
-    private int type13Cpa;
+    private int type13_cpa;
 
     @JsonIgnoreProperties(value = "type13_cr")
-    private int type13Cr;
+    private int type13_cr;
 
     @JsonIgnoreProperties(value = "type13_profit")
-    private int type13Profit;
+    private int type13_profit;
 
     @JsonIgnoreProperties(value = "type13_roas")
-    private int type13Roas;
+    private int type13_roas;
 
     @JsonIgnoreProperties(value = "type13_roi")
-    private int type13Roi;
+    private int type13_roi;
 
     @JsonIgnoreProperties(value = "type14_aov")
-    private int type14Aov;
+    private int type14_aov;
 
     @JsonIgnoreProperties(value = "type14_cost")
-    private int type14Cost;
+    private int type14_cost;
 
     @JsonIgnoreProperties(value = "type14_cpa")
-    private int type14Cpa;
+    private int type14_cpa;
 
     @JsonIgnoreProperties(value = "type14_cr")
-    private int type14Cr;
+    private int type14_cr;
 
     @JsonIgnoreProperties(value = "type14_profit")
-    private int type14Profit;
+    private int type14_profit;
 
     @JsonIgnoreProperties(value = "type14_roas")
-    private int type14Roas;
+    private int type14_roas;
 
     @JsonIgnoreProperties(value = "type14_roi")
-    private int type14Roi;
+    private int type14_roi;
 
     @JsonIgnoreProperties(value = "type15_aov")
-    private int type15Aov;
+    private int type15_aov;
 
     @JsonIgnoreProperties(value = "type15_cost")
-    private int type15Cost;
+    private int type15_cost;
 
     @JsonIgnoreProperties(value = "type15_cpa")
-    private int type15Cpa;
+    private int type15_cpa;
 
     @JsonIgnoreProperties(value = "type15_cr")
-    private int type15Cr;
+    private int type15_cr;
 
     @JsonIgnoreProperties(value = "type15_profit")
-    private int type15Profit;
+    private int type15_profit;
 
     @JsonIgnoreProperties(value = "type15_roas")
-    private int type15Roas;
+    private int type15_roas;
 
     @JsonIgnoreProperties(value = "type15_roi")
-    private int type15Roi;
+    private int type15_roi;
 
     @JsonIgnoreProperties(value = "type16_aov")
-    private int type16Aov;
+    private int type16_aov;
 
     @JsonIgnoreProperties(value = "type16_cost")
-    private int type16Cost;
+    private int type16_cost;
 
     @JsonIgnoreProperties(value = "type16_cpa")
-    private int type16Cpa;
+    private int type16_cpa;
 
     @JsonIgnoreProperties(value = "type16_cr")
-    private int type16Cr;
+    private int type16_cr;
 
     @JsonIgnoreProperties(value = "type16_profit")
-    private int type16Profit;
+    private int type16_profit;
 
     @JsonIgnoreProperties(value = "type16_roas")
-    private int type16Roas;
+    private int type16_roas;
 
     @JsonIgnoreProperties(value = "type16_roi")
-    private int type16Roi;
+    private int type16_roi;
 
     @JsonIgnoreProperties(value = "type17_aov")
-    private int type17Aov;
+    private int type17_aov;
 
     @JsonIgnoreProperties(value = "type17_cost")
-    private int type17Cost;
+    private int type17_cost;
 
     @JsonIgnoreProperties(value = "type17_cpa")
-    private int type17Cpa;
+    private int type17_cpa;
 
     @JsonIgnoreProperties(value = "type17_cr")
-    private int type17Cr;
+    private int type17_cr;
 
     @JsonIgnoreProperties(value = "type17_profit")
-    private int type17Profit;
+    private int type17_profit;
 
     @JsonIgnoreProperties(value = "type17_roas")
-    private int type17Roas;
+    private int type17_roas;
 
     @JsonIgnoreProperties(value = "type17_roi")
-    private int type17Roi;
+    private int type17_roi;
 
     @JsonIgnoreProperties(value = "type18_aov")
-    private int type18Aov;
+    private int type18_aov;
 
     @JsonIgnoreProperties(value = "type18_cost")
-    private int type18Cost;
+    private int type18_cost;
 
     @JsonIgnoreProperties(value = "type18_cpa")
-    private int type18Cpa;
+    private int type18_cpa;
 
     @JsonIgnoreProperties(value = "type18_cr")
-    private int type18Cr;
+    private int type18_cr;
 
     @JsonIgnoreProperties(value = "type18_profit")
-    private int type18Profit;
+    private int type18_profit;
 
     @JsonIgnoreProperties(value = "type18_roas")
-    private int type18Roas;
+    private int type18_roas;
 
     @JsonIgnoreProperties(value = "type18_roi")
-    private int type18Roi;
+    private int type18_roi;
 
     @JsonIgnoreProperties(value = "type19_aov")
-    private int type19Aov;
+    private int type19_aov;
 
     @JsonIgnoreProperties(value = "type19_cost")
-    private int type19Cost;
+    private int type19_cost;
 
     @JsonIgnoreProperties(value = "type19_cpa")
-    private int type19Cpa;
+    private int type19_cpa;
 
     @JsonIgnoreProperties(value = "type19_cr")
-    private int type19Cr;
+    private int type19_cr;
 
     @JsonIgnoreProperties(value = "type19_profit")
-    private int type19Profit;
+    private int type19_profit;
 
     @JsonIgnoreProperties(value = "type19_roas")
-    private int type19Roas;
+    private int type19_roas;
 
     @JsonIgnoreProperties(value = "type19_roi")
-    private int type19Roi;
+    private int type19_roi;
 
     @JsonIgnoreProperties(value = "type1_aov")
-    private int type1Aov;
+    private int type1_aov;
 
     @JsonIgnoreProperties(value = "type1_cost")
-    private int type1Cost;
+    private int type1_cost;
 
     @JsonIgnoreProperties(value = "type1_cpa")
-    private int type1Cpa;
+    private int type1_cpa;
 
     @JsonIgnoreProperties(value = "type1_cr")
-    private int type1Cr;
+    private int type1_cr;
 
     @JsonIgnoreProperties(value = "type1_profit")
-    private int type1Profit;
+    private int type1_profit;
 
     @JsonIgnoreProperties(value = "type1_roas")
-    private int type1Roas;
+    private int type1_roas;
 
     @JsonIgnoreProperties(value = "type1_roi")
-    private int type1Roi;
+    private int type1_roi;
 
     @JsonIgnoreProperties(value = "type20_aov")
-    private int type20Aov;
+    private int type20_aov;
 
     @JsonIgnoreProperties(value = "type20_cost")
-    private int type20Cost;
+    private int type20_cost;
 
     @JsonIgnoreProperties(value = "type20_cpa")
-    private int type20Cpa;
+    private int type20_cpa;
 
     @JsonIgnoreProperties(value = "type20_cr")
-    private int type20Cr;
+    private int type20_cr;
 
     @JsonIgnoreProperties(value = "type20_profit")
-    private int type20Profit;
+    private int type20_profit;
 
     @JsonIgnoreProperties(value = "type20_roas")
-    private int type20Roas;
+    private int type20_roas;
 
     @JsonIgnoreProperties(value = "type20_roi")
-    private int type20Roi;
+    private int type20_roi;
 
     @JsonIgnoreProperties(value = "type2_aov")
-    private int type2Aov;
+    private int type2_aov;
 
     @JsonIgnoreProperties(value = "type2_cost")
-    private int type2Cost;
+    private int type2_cost;
 
     @JsonIgnoreProperties(value = "type2_cpa")
-    private int type2Cpa;
+    private int type2_cpa;
 
     @JsonIgnoreProperties(value = "type2_cr")
-    private int type2Cr;
+    private int type2_cr;
 
     @JsonIgnoreProperties(value = "type2_profit")
-    private int type2Profit;
+    private int type2_profit;
 
     @JsonIgnoreProperties(value = "type2_roas")
-    private int type2Roas;
+    private int type2_roas;
 
     @JsonIgnoreProperties(value = "type2_roi")
-    private int type2Roi;
+    private int type2_roi;
 
     @JsonIgnoreProperties(value = "type3_aov")
-    private int type3Aov;
+    private int type3_aov;
 
     @JsonIgnoreProperties(value = "type3_cost")
-    private int type3Cost;
+    private int type3_cost;
 
     @JsonIgnoreProperties(value = "type3_cpa")
-    private int type3Cpa;
+    private int type3_cpa;
 
     @JsonIgnoreProperties(value = "type3_cr")
-    private int type3Cr;
+    private int type3_cr;
 
     @JsonIgnoreProperties(value = "type3_profit")
-    private int type3Profit;
+    private int type3_profit;
 
     @JsonIgnoreProperties(value = "type3_roas")
-    private int type3Roas;
+    private int type3_roas;
 
     @JsonIgnoreProperties(value = "type3_roi")
-    private int type3Roi;
+    private int type3_roi;
 
     @JsonIgnoreProperties(value = "type4_aov")
-    private int type4Aov;
+    private int type4_aov;
 
     @JsonIgnoreProperties(value = "type4_cost")
-    private int type4Cost;
+    private int type4_cost;
 
     @JsonIgnoreProperties(value = "type4_cpa")
-    private int type4Cpa;
+    private int type4_cpa;
 
     @JsonIgnoreProperties(value = "type4_cr")
-    private int type4Cr;
+    private int type4_cr;
 
     @JsonIgnoreProperties(value = "type4_profit")
-    private int type4Profit;
+    private int type4_profit;
 
     @JsonIgnoreProperties(value = "type4_roas")
-    private int type4Roas;
+    private int type4_roas;
 
     @JsonIgnoreProperties(value = "type4_roi")
-    private int type4Roi;
+    private int type4_roi;
 
     @JsonIgnoreProperties(value = "type5_aov")
-    private int type5Aov;
+    private int type5_aov;
 
     @JsonIgnoreProperties(value = "type5_cost")
-    private int type5Cost;
+    private int type5_cost;
 
     @JsonIgnoreProperties(value = "type5_cpa")
-    private int type5Cpa;
+    private int type5_cpa;
 
     @JsonIgnoreProperties(value = "type5_cr")
-    private int type5Cr;
+    private int type5_cr;
 
     @JsonIgnoreProperties(value = "type5_profit")
-    private int type5Profit;
+    private int type5_profit;
 
     @JsonIgnoreProperties(value = "type5_roas")
-    private int type5Roas;
+    private int type5_roas;
 
     @JsonIgnoreProperties(value = "type5_roi")
-    private int type5Roi;
+    private int type5_roi;
 
     @JsonIgnoreProperties(value = "type6_aov")
-    private int type6Aov;
+    private int type6_aov;
 
     @JsonIgnoreProperties(value = "type6_cost")
-    int type6Cost;
+    private int type6_cost;
 
     @JsonIgnoreProperties(value = "type6_cpa")
     private int type6Cpa;
@@ -572,65 +625,9 @@ public class StatsRequest {
     @JsonIgnoreProperties(value = "type7_cost")
     private int type7Cost;
 
-    @JsonIgnoreProperties(value = "type7_cpa")
-    private int type7Cpa;
-
-    @JsonIgnoreProperties(value = "type7_cr")
-    private int type7Cr;
-
-    @JsonIgnoreProperties(value = "type7_profit")
-    private int type7Profit;
-
-    @JsonIgnoreProperties(value = "type7_roas")
-    private int type7Roas;
-
-    @JsonIgnoreProperties(value = "type7_roi")
-    private int type7Roi;
-
-    @JsonIgnoreProperties(value = "type8_aov")
-    private int type8Aov;
-
-    @JsonIgnoreProperties(value = "type8_cost")
-    private int type8Cost;
-
-    @JsonIgnoreProperties(value = "type8_cpa")
-    private int type8Cpa;
-
-    @JsonIgnoreProperties(value = "type8_cr")
-    private int type8Cr;
-
-    @JsonIgnoreProperties(value = "type8_profit")
-    private int type8Profit;
-
-    @JsonIgnoreProperties(value = "type8_roas")
-    private int type8Roas;
-
-    @JsonIgnoreProperties(value = "type8_roi")
-    private int type8Roi;
-
-    @JsonIgnoreProperties(value = "type9_aov")
-    private int type9Aov;
-
-    @JsonIgnoreProperties(value = "type9_cost")
-    private int type9Cost;
-
-    @JsonIgnoreProperties(value = "type9_cpa")
-    private int type9Cpa;
-
-    @JsonIgnoreProperties(value = "type9_cr")
-    private int type9Cr;
-
-    @JsonIgnoreProperties(value = "type9_profit")
-    private int type9Profit;
-
-    @JsonIgnoreProperties(value = "type9_roas")
-    private int type9Roas;
-
-    @JsonIgnoreProperties(value = "type9_roi")
-    private int type9Roi;
-
     @JsonIgnoreProperties(value = "unique_clicks")
     private int uniqueClicks;
-
+    @JsonIgnoreProperties(value = "convtype5")
+    private String convtype5;
 
 }
